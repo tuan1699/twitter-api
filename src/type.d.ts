@@ -9,5 +9,6 @@ declare module 'express' {
     decodedRefreshToken?: TokenPayload
     decodedEmailVerifyToken?: TokenPayload
     decodedAccessToken?: TokenPayload
+    decodedForgotPasswordToken?: TokenPayload
   }
 }

@@ -4,6 +4,7 @@ import { UserVerifyStatus } from '~/constants/enums'
 interface UserType {
   _id?: ObjectId
   name: string
+  username: string
   email: string
   date_of_birth: Date
   password: string
@@ -22,6 +23,7 @@ interface UserType {
 export default class User {
   _id: ObjectId
   name: string
+  username: string
   email: string
   date_of_birth: Date
   password: string
@@ -40,6 +42,7 @@ export default class User {
     const date = new Date()
     this._id = user._id || new ObjectId()
     this.name = user.name || ''
+    this.username = user.username || ''
     this.email = user.email
     this.date_of_birth = user.date_of_birth || new Date()
     this.password = user.password
