@@ -64,5 +64,6 @@ export const USERS_MESSAGES = {
   CHANGE_PASSWORD_SUCCESS: 'Change password successfully',
   USERNAME_ALREADY_EXISTS: 'Username already exists',
   GOOGLE_MAIL_NOT_VERIFIED: 'Google mail not verified',
-  GOOGLE_LOGIN_SUCCESS: 'Google login successfully'
+  GOOGLE_LOGIN_SUCCESS: 'Google login successfully',
+  UPLOAD_SUCCESS: 'Upload successfully'
 } as const
