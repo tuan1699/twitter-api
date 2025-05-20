@@ -14,7 +14,8 @@ import {
   followController,
   unFollowController,
   changePasswordController,
-  loginWithGoogleController
+  loginWithGoogleController,
+  refreshTokenController
 } from '~/controllers/users.controller'
 import { filterMiddleware } from '~/middlewares/common.middlewares'
 import {
@@ -76,6 +77,14 @@ usersRoutes.post('/logout', accessTokenValidator, refreshTokenValidator, wrapReq
  * Body: { email_verify_token: string }
  */
 usersRoutes.post('/verify-email', emailVerifyTokenValidator, wrapRequestHandler(verifyEmailController))
+
+/**
+ * Description: Refresh token
+ * Path: /refresh-token
+ * Method: POST
+ * Body: { refresh_token: string }
+ */
+usersRoutes.post('/refresh-token', refreshTokenValidator, wrapRequestHandler(refreshTokenController))
 
 /**
  * Description: Verify email when user client click on the link in email
